@@ -8,6 +8,9 @@ namespace ErrorHandling.Web
             builder.Services.AddControllersWithViews();
             var app = builder.Build();
 
+            if (!app.Environment.IsDevelopment())
+                app.UseExceptionHandler("/error/exception");
+
             app.MapControllers();
 
             app.Run();
