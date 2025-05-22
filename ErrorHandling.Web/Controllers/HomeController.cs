@@ -12,6 +12,5 @@ public class HomeController : Controller
     public IActionResult Throw()
     {
         throw new Exception("error");
-        return View();
     }
 }

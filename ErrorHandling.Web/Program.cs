@@ -9,7 +9,10 @@ namespace ErrorHandling.Web
             var app = builder.Build();
 
             if (!app.Environment.IsDevelopment())
+            {
                 app.UseExceptionHandler("/error/exception");
+                app.UseStatusCodePagesWithRedirects("~/error/http/{0}");
+            }   
 
             app.MapControllers();
 
