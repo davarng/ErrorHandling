@@ -12,7 +12,8 @@ namespace ErrorHandling.Web
             {
                 app.UseExceptionHandler("/error/exception");
                 app.UseStatusCodePagesWithRedirects("~/error/http/{0}");
-            }   
+            }
+            app.UseStaticFiles();
 
             app.MapControllers();
 
